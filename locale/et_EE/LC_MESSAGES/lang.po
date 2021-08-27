@@ -1,0 +1,9 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Test\n"
+
+msgid "in Estonian"
+msgstr "eesti keeles"
+
+msgid "in English"
+msgstr "inglise keeles"
