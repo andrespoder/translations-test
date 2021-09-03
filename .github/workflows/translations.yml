@@ -61,3 +61,4 @@ jobs:
       uses: distributhor/workflow-webhook@v2
       env:
         webhook_url: http://uvn-67-7.tll01.zonevs.eu/hooks/github
+        webhook_secret: ""
