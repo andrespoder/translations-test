@@ -31,7 +31,7 @@ jobs:
         locale -a
 
     - name: Checkout code
-      uses: actions/checkout@v1
+      uses: actions/checkout@v2
 
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
@@ -51,6 +51,8 @@ jobs:
         
     - name: Commit pot
       run: |
+        git config user.email "bot@example.com"
+        git config user.name "bot"
         git status
         git diff
         git add lang.pot
