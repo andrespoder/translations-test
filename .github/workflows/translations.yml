@@ -42,12 +42,10 @@ jobs:
     - name: Create list of files
       run: |
         find . -path ./vendors -prune -type f -o -name "*.php" -o -name "*.ctp" > potfiles.txt
-        cat potfiles.txt
 
     - name: Generate pot
       run: |
         xgettext -L PHP --output=locale/lang.pot -f potfiles.txt --from-code=UTF-8 --no-location --keyword="_x:1c,2" --keyword="_n:1,2"
-        cat lang.pot
         
     - name: Commit pot
       run: |
