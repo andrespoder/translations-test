@@ -45,7 +45,7 @@ jobs:
 
     - name: Generate pot
       run: |
-        xgettext -L PHP --output=locale/lang.pot -f potfiles.txt --from-code=UTF-8 --no-location --keyword="_x:1c,2" --keyword="_n:1,2"
+        xgettext -L PHP --output=locale/lang.pot -f potfiles.txt --from-code=UTF-8 --no-location --keyword="_x:1c,2" --keyword="_n:1,2" --omit-header
         
     - name: Commit pot
       run: |
