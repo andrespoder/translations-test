@@ -14,6 +14,11 @@ jobs:
       SIMPLBOOKS_ENV: github
 
     steps:
+    - name: Install gettext
+      run: |
+        apt-get update -y
+        apt-get install gettext
+        
     - name: Set up locales
       run: |
         sudo locale-gen en_GB.UTF-8
