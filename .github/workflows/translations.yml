@@ -57,6 +57,13 @@ jobs:
         git commit -m 'update translations template'
         git push
         
+    - name: Trigger webhook
+      run: |
+        curl \
+        -d operation=pull \
+        -H "Authorization: Token ${{secrets.WEBLATE_WEBHOOK_TOKEN}}" \
+        ${{secrets.WEBLATE_API_URL}}components/simplbooks/main/repository/
+        
 #    - name: Trigger webhook
 #      uses: distributhor/workflow-webhook@v2
 #      env:
