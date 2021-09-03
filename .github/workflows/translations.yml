@@ -46,7 +46,7 @@ jobs:
 
     - name: Generate pot
       run: |
-        xgettext -L PHP --output=lang.pot -f potfiles.txt --from-code=UTF-8 --no-location --keyword="_x:1c,2" --keyword="_n:1,2"
+        xgettext -L PHP --output=locale/lang.pot -f potfiles.txt --from-code=UTF-8 --no-location --keyword="_x:1c,2" --keyword="_n:1,2"
         cat lang.pot
         
     - name: Commit pot
@@ -55,6 +55,6 @@ jobs:
         git config user.name "bot"
         git status
         git diff
-        git add lang.pot
+        git add locale/lang.pot
         git commit -m 'update translations template'
         git push
