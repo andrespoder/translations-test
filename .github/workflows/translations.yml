@@ -1,0 +1,43 @@
+name: Translations
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    env:
+      SIMPLBOOKS_ENV: github
+
+    steps:
+    - name: Set up locales
+      run: |
+        sudo locale-gen en_GB.UTF-8
+        sudo locale-gen et_EE.UTF-8
+        sudo locale-gen fi_FI.UTF-8
+        sudo locale-gen ru_RU.UTF-8
+        sudo locale-gen pl_PL.UTF-8
+        sudo locale-gen sv_SE.UTF-8
+        sudo locale-gen lt_LT.UTF-8
+        locale -a
+
+    - name: Checkout code
+      uses: actions/checkout@v1
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+        extensions: mbstring, intl, imagick
+
+    - name: Create list of files
+      run: |
+        find . -path ./vendors -prune -type f -o -name "*.php" -o -name "*.ctp" > potfiles.txt
+
+    - name: Generate pot
+      run: |
+        xgettext -L PHP --output=lang.pot -f potfiles.txt --from-code=UTF-8 --no-location --keyword="_x:1c,2" --keyword="_n:1,2"
