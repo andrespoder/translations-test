@@ -57,8 +57,8 @@ jobs:
         git commit -m 'update translations template'
         git push
         
-    - name: Trigger webhook
-      uses: distributhor/workflow-webhook@v2
-      env:
-        webhook_url: http://uvn-67-7.tll01.zonevs.eu/hooks/github
-        webhook_secret: test
+#    - name: Trigger webhook
+#      uses: distributhor/workflow-webhook@v2
+#      env:
+#        webhook_url: http://uvn-67-7.tll01.zonevs.eu/hooks/github
+#        webhook_secret: test
