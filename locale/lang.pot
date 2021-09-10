@@ -3,3 +3,6 @@ msgstr ""
 
 msgid "in Estonian"
 msgstr ""
+
+msgid "Hello"
+msgstr ""
