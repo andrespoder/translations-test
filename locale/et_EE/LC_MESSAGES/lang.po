@@ -17,3 +17,9 @@ msgstr "inglise keeles"
 
 msgid "in Estonian"
 msgstr "eesti keeli"
+
+msgid "Hello"
+msgstr ""
+
+msgid "Welcome"
+msgstr ""
