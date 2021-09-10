@@ -9,3 +9,6 @@ msgstr ""
 
 msgid "Welcome"
 msgstr ""
+
+msgid "Bye-bye"
+msgstr ""
