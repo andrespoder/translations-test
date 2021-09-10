@@ -62,7 +62,7 @@ jobs:
         curl \
         -d operation=pull \
         -H "Authorization: Token ${{secrets.WEBLATE_WEBHOOK_TOKEN}}" \
-        ${{secrets.WEBLATE_API_URL}}components/simplbooks/main/repository/
+        ${{secrets.WEBLATE_API_URL}}components/simplbooks/test/repository/
         
 #    - name: Trigger webhook
 #      uses: distributhor/workflow-webhook@v2
