@@ -23,3 +23,6 @@ msgstr "Tere"
 
 msgid "Welcome"
 msgstr "Tere tulemast"
+
+msgid "Bye-bye"
+msgstr ""
